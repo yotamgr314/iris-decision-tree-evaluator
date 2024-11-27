@@ -26,6 +26,18 @@ print("Average Accuracy of DT with depth ", clf.max_depth, " is: ",round(accurac
 precision = cross_val_score(clf, iris.data, iris.target, scoring='precision_weighted', cv=10) # NOTE I defined what this function does in the import phase. NOTE Scoring = 'precision_weighted' setting the measurement of the model to be by precision (how much of the positive predications of the model where actually true)
 print("Average precision_weighted of DT with depth ", clf.max_depth, " is: ", round(precision.mean(),3))
 
+
+# NOTE: Compute recall (sensitivity) using cross-validation - # question number 1 section C.
+recall = cross_val_score(clf, iris.data, iris.target, scoring='recall_weighted', cv=10)
+# Print result
+print("Average recall of DT with depth ", clf.max_depth, " is: ", round(recall.mean(), 3))
+
+#NOTE : compute f1_score using cross-validation - $ questions number 1 section C.
+f1_score = cross_val_score(clf, iris.data, iris.target, scoring='f1_weighted', cv=10)
+# Print result
+print("Average F1-score of DT with depth ", clf.max_depth, " is: ", round(f1_score.mean(), 3))
+
+
 # NOTE - creating a simple graph according to the given data
 X = range(10) # NOTE - Generate a range of values from 0 to 9
 plt.plot(X, [x * x for x in X]) # NOTE draws a graph in which the X Axis describes the values of x. NOTE and the Y axis describes the values of of (x^2).
