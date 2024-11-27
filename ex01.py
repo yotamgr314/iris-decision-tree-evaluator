@@ -1,10 +1,11 @@
-from sklearn import tree
-from sklearn.model_selection import cross_val_score
-import matplotlib.pyplot as plt
-from sklearn import datasets
+# NOTE sklearn is a pupolar python library for ML.
+from sklearn import tree # NOTE - tree is a module which provides tools to build Decision tree.
+from sklearn.model_selection import cross_val_score # NOTE - model_selection is a moudle which provides tools to split data and to evaluate performance of models. NOTE cross_val_score preforms cross validation which is a method for assessing the performance of a model by dividing the data into different groups
+import matplotlib.pyplot as plt # NOTE a model which allowing to create all sorts of graphs.
+from sklearn import datasets # NOTE - loads the sklearn data sets.
 
-# import some data to play with
-iris = datasets.load_iris()
+
+iris = datasets.load_iris() # NOTE - imports the Iris data set.
 
 #mylist = []
 #do loop
